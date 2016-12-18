@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
+gem 'sprockets'
 gem 'require_all'
 gem 'rake'
 gem 'shotgun'
