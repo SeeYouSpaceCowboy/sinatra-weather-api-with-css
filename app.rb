@@ -7,9 +7,11 @@ class Application < Sinatra::Base
   end
 
   post '/' do
-    @city = params[:city]
-    @country = params[:country]
-    @temperture = 0
+    weather = Weather.new(params[:city])
+
+    @city = params[:city].capitalize
+    @country = params[:country].capitalize
+    @temperture = weather.next_five_days
     erb :show
   end
 end

@@ -9,6 +9,8 @@
   <body>
     <p><%=@city%></p>
     <p><%=@country%></p>
-    <p><%=@temperture%></p>
+    <%@temperture.each do |item| %>
+    <p><%=item%></p>
+    <%end%>
   </body>
 </html>
